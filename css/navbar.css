@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+html{
+    
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+    --cinza: #1c1c1c;
+    --preto: #121212;
+    --vermelho: #94001e;
+    --pos1: -8px;
+    --pos2: 42px;
+    --pos3: 92px;
+    --pos4: 142px;
+    --pos5: 192px;
+    --pos6: 242px;
+    --pos7: 292px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--preto);
+}
+
+.navigation{
+    width: 360px;
+    height: 70px;
+    background: var(--cinza);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 30px;
+}
+
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.75em;
+    text-align: center;
+    transition: 0.5s;
+    color: white;
+}
+
+.navigation ul li.active a .icon{
+    transform: translateY(-3.9vh);
+}
+.navigation ul li.active a img{
+    transform: translateY(0.4vh);
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator{
+    position: absolute;
+    top: -45%;
+    margin-top: 6px;
+    margin-left: 6px;
+    width: 55px;
+    height: 55px;
+    background: var(--vermelho);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.brilho{
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 6px;
+    top: -45%;
+    width: 55px;
+    height: 55px;
+    background: rgb(64,0,13);
+    background: linear-gradient(180deg, rgb(64,0,13) 0%, rgb(64,0,13) 5%, var(--vermelho) 100%);
+    box-shadow: 0px 0px 8px 2px var(--vermelho);
+    border-radius: 50%;
+    transition: 0.5s;
+    
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(var(--pos1))
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(var(--pos2))
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(var(--pos3))
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(var(--pos4))
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(var(--pos5))
+}
+.navigation ul li:nth-child(6).active ~ .indicator{
+    transform: translateX(var(--pos6))
+}
+.navigation ul li:nth-child(7).active ~ .indicator{
+    transform: translateX(var(--pos7))
+}
+
+
+.navigation ul li:nth-child(1).active ~ .brilho{
+    transform: translateX(var(--pos1))
+}
+.navigation ul li:nth-child(2).active ~ .brilho{
+    transform: translateX(var(--pos2))
+}
+.navigation ul li:nth-child(3).active ~ .brilho{
+    transform: translateX(var(--pos3))
+}
+.navigation ul li:nth-child(4).active ~ .brilho{
+    transform: translateX(var(--pos4))
+}
+.navigation ul li:nth-child(5).active ~ .brilho{
+    transform: translateX(var(--pos5))
+}
+.navigation ul li:nth-child(6).active ~ .brilho{
+    transform: translateX(var(--pos6))
+}
+.navigation ul li:nth-child(7).active ~ .brilho{
+    transform: translateX(var(--pos7))
+}
+
+.logo{
+    transform: translateY(5px);
+    color: white;
+    filter: brightness(100%);
+}
+
+.show{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+}
+
+.show.active{
+    display: block;
+}
+
+button{
+    background: transparent;
+    border: transparent;
+    font-size: 15px !important;
+    width: 100% !important;
+}
+.viewport {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#testeL {
+    background: blue;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    margin-left: -200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#perfil {
+    background: purple;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    margin-left: -300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#poderes {
+    background: darkblue;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    margin-left: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#testeR {
+    background: darkred;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    margin-left: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#config {
+    background: darkgreen;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    margin-left: 300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
