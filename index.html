@@ -38,118 +38,33 @@
                 </div>
             </div>
             <div class="itens">
+                <div class="titles">
                     <h1 class="item">ITEM</h1><h1 class="categoria">CATEGORIA</h1><h1 class="espaço">ESPAÇO</h1>
-                    <div class="item-container">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-2">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-3">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-4">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-5">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-6">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-7">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-8">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-9">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-                    <div class="item-container-10">
-                        <div class="item-nome">
-                            <textarea name="item-nome" id="item-nome"></textarea>
-                        </div>
-                        <div class="item-categoria">
-                            <textarea name="item-categoria" id="item-categoria"></textarea>
-                        </div>
-                        <div class="item-espaco">
-                            <textarea name="item-espaco" id="item-espaco"></textarea>
-                        </div>
-                    </div>
-            </div>
+                </div>
+                <div class="item-container">
+                  <div class="item-nome">
+                    <textarea name="item-nome" id="item-nome"></textarea>
+                  </div>
+                  <div class="item-categoria">
+                    <textarea name="item-categoria" id="item-categoria"></textarea>
+                  </div>
+                  <div class="item-espaco">
+                    <textarea name="item-espaco" id="item-espaco"></textarea>
+                  </div>
+                  <button class="add-item">+</button> <!-- Plus button -->
+                </div>
+                <div class="item-container-template" style="display: none;">
+                  <div class="item-nome-1">
+                    <textarea name="item-nome-1"></textarea>
+                  </div>
+                  <div class="item-categoria-1">
+                    <textarea name="item-categoria-1"></textarea>
+                  </div>
+                  <div class="item-espaco-1">
+                    <textarea name="item-espaco-1"></textarea>
+                  </div>
+                </div>
+              </div>
         </div>
         <div class="atributos-page" id="atributos">
             <div id="AGI">
@@ -405,8 +320,6 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
         function toggleDropdown() {
             var caixaMaior = document.getElementById('habilidade-descricao');
@@ -417,6 +330,40 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const addButton = document.querySelector('.add-item');
+          const container = document.querySelector('.itens');
+          const template = document.querySelector('.item-container-template');
+        
+          addButton.addEventListener('click', () => {
+            // Clone the template and remove display none
+            const newContainer = template.cloneNode(true);
+            newContainer.style.display = 'flex';
+            newContainer.style.height = '50px';
+            newContainer.style.paddingBottom = '50px';
+            newContainer.style.marginTop = '5px';
+            newContainer.classList.remove('item-container-template');
+        
+            // Insert the new container before the add button
+            container.insertBefore(newContainer, addButton.parentElement.nextElementSibling);
+        
+            // Optionally, add a remove button to each new container
+            const removeButton = document.createElement('button');
+            removeButton.textContent = '-';
+            removeButton.classList.add('remove-item');
+            newContainer.appendChild(removeButton);
+        
+            // Handle removing the container
+            removeButton.addEventListener('click', () => {
+              newContainer.remove();
+            });
+          });
+        });
+        </script>
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

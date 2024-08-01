@@ -8,15 +8,15 @@
     resize: none;
 }
 html{
-    
     -webkit-tap-highlight-color: transparent;
 }
 #atributos {
     background: #121212;
     background-image: url(../img/Atributos.png);
-    background-position: 0 2.5vh;
+    background-position: 0 20px;
     background-size: 100vw;
     background-repeat: no-repeat;
+    background-attachment: local;
     width: 100vw;
     height: 100vh;
     transition: 0.5s;
@@ -24,12 +24,13 @@ html{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: scroll;
 }
 #AGI{
-    height: 6.5vh;
-    width: 14vw;
-    margin-top: 6vh;
-    margin-left: 43vw;
+    height: 50px;
+    width: 50px;
+    margin-top: 46px;
+    margin-left: 155px;
 }
 #AGI textarea{
     height: 100%;
@@ -43,10 +44,10 @@ html{
     text-align: center;
 }
 #FOR{
-    height: 6.5vh;
-    width: 14vw;
-    margin-top: 4vh;
-    margin-left: 12vw;
+    height: 50px;
+    width: 50px;
+    margin-top: 30px;
+    margin-left: 43px;
 }
 #FOR textarea{
     height: 100%;
@@ -60,10 +61,10 @@ html{
     text-align: center;
 }
 #INT{
-    height: 6.5vh;
-    width: 14vw;
-    margin-top: -6.5vh;
-    margin-left: 74vw;
+    height: 50px;
+    width: 50px;
+    margin-top: -50px;
+    margin-left: 266px;
 }
 #INT textarea{
     height: 100%;
@@ -77,10 +78,10 @@ html{
     text-align: center;
 }
 #PRE{
-    height: 6.5vh;
-    width: 14vw;
-    margin-top: 11vh;
-    margin-left: 24.5vw;
+    height: 50px;
+    width: 50px;
+    margin-top: 82px;
+    margin-left: 88px;
 }
 #PRE textarea{
     height: 100%;
@@ -94,10 +95,10 @@ html{
     text-align: center;
 }
 #VIG{
-    height: 6.5vh;
-    width: 14vw;
-    margin-top: -6.5vh;
-    margin-left: 62.5vw;
+    height: 50px;
+    width: 50px;
+    margin-top: -50px;
+    margin-left: 225px;
 }
 #VIG textarea{
     height: 100%;
@@ -113,27 +114,26 @@ html{
 .pericias{
     color: white;
     background-color: black;
-    height: 20vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 10vh;
+    height: 160px;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-top: 80px;
 }
 .pericias .texto{
     display: flex;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 0.5vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
     justify-content: space-between;
     font-weight: 500;
-    margin-bottom: 1vh;
+    margin-bottom: 3px;
 }
 .pericias-lista{
-    padding-left: 1vw;
+    padding-left: 5px;
     background: black;
-    overflow: scroll;
-    height: 31vh;
+    height: 750px;
 }
-@media only screen and (min-width: 0px) and (max-width: 720px) and (min-height: 0px) and (max-height: 1600px) and (orientation: portrait) {
+@media (min-width: 720px), (min-height: 1600px){
     #AGI{
         height: 6.6vh;
     }

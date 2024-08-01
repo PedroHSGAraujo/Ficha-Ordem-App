@@ -7,9 +7,7 @@
     font-family: 'Poppins', sans-serif;
     resize: none;
 }
-
 html{
-    
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -84,10 +82,10 @@ body{
 }
 
 .navigation ul li.active a .icon{
-    transform: translateY(-3.9vh);
+    transform: translateY(-31px);
 }
 .navigation ul li.active a img{
-    transform: translateY(0.4vh);
+    transform: translateY(2px);
 }
 
 .navigation ul li a .text{
