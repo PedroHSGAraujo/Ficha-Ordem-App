@@ -112,7 +112,7 @@ html{
 }
 .pericias{
     color: white;
-    background-color: red;
+    background-color: black;
     height: 20vh;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -124,7 +124,12 @@ html{
     padding-right: 2vw;
     padding-top: 0.5vh;
     justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 1vh;
 }
 .pericias-lista{
     padding-left: 1vw;
+    background: black;
+    overflow: scroll;
+    height: 31vh;
 }
