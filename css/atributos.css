@@ -133,3 +133,23 @@ html{
     overflow: scroll;
     height: 31vh;
 }
+@media only screen and (min-width: 0px) and (max-width: 720px) and (min-height: 0px) and (max-height: 1600px) and (orientation: portrait) {
+    #AGI{
+        height: 6.6vh;
+    }
+    #FOR{
+        height: 6.6vh;
+        margin-top: 4.5vh;
+    }
+    #INT{
+        height: 6.6vh;
+    }
+    #VIG{
+        height: 6.6vh;
+        margin-top: -6.5vh;
+    }
+    #PRE{
+        height: 6.6vh;
+        margin-top: 11.5vh;
+    }
+}

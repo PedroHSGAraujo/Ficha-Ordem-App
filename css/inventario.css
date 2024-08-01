@@ -232,6 +232,8 @@ html{
     font-size: 2em;
     height: 50px ;
     width: 50px;
+    text-align-last: center;
+    align-self: center;
 }
 .item-categoria{
     position: relative;
@@ -245,6 +247,8 @@ html{
     font-size: 2em;
     height: 50px ;
     width: 50px;
+    text-align-last: center;
+    align-self: center;
 }
 .item-espaco{
     position: relative;
