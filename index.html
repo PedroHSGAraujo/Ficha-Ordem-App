@@ -39,32 +39,37 @@
             </div>
             <div class="itens">
                 <div class="titles">
-                    <h1 class="item">ITEM</h1><h1 class="categoria">CATEGORIA</h1><h1 class="espaço">ESPAÇO</h1>
+                    <h1 class="item">ITEM</h1>
+                    <h1 class="categoria">CATEGORIA</h1>
+                    <h1 class="espaço">ESPAÇO</h1>
                 </div>
                 <div class="item-container">
-                  <div class="item-nome">
-                    <textarea name="item-nome" id="item-nome"></textarea>
-                  </div>
-                  <div class="item-categoria">
-                    <textarea name="item-categoria" id="item-categoria"></textarea>
-                  </div>
-                  <div class="item-espaco">
-                    <textarea name="item-espaco" id="item-espaco"></textarea>
-                  </div>
-                  <button class="add-item">+</button> <!-- Plus button -->
+                    <div class="item-nome">
+                        <textarea name="item-nome" id="item-nome"></textarea>
+                    </div>
+                    <div class="item-categoria">
+                        <textarea name="item-categoria" id="item-categoria"></textarea>
+                    </div>
+                    <div class="item-espaco">
+                        <textarea name="item-espaco" id="item-espaco"></textarea>
+                    </div>
+                    <button class="add-item">+</button> <!-- Plus button -->
                 </div>
                 <div class="item-container-template" style="display: none;">
-                  <div class="item-nome-1">
-                    <textarea name="item-nome-1"></textarea>
-                  </div>
-                  <div class="item-categoria-1">
-                    <textarea name="item-categoria-1"></textarea>
-                  </div>
-                  <div class="item-espaco-1">
-                    <textarea name="item-espaco-1"></textarea>
-                  </div>
+                    <div class="item-nome-1">
+                        <textarea name="item-nome-1"></textarea>
+                    </div>
+                    <div class="item-categoria-1">
+                        <textarea name="item-categoria-1"></textarea>
+                    </div>
+                    <div class="item-espaco-1">
+                        <textarea name="item-espaco-1"></textarea>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <div class="espacador">
+
+            </div>
         </div>
         <div class="atributos-page" id="atributos">
             <div id="AGI">
@@ -84,7 +89,8 @@
             </div>
             <div class="pericias">
                 <div class="texto">
-                    <p>Pericias</p> <p>Treino</p>
+                    <p>Pericias</p>
+                    <p>Treino</p>
                 </div>
                 <div class="pericias-lista">
                     <p>Acrobacia+</p>
@@ -143,11 +149,11 @@
                     <label for="protecoes-pesadas" class="proficiencias">Pesadas</label>
                 </div>
                 <div class="sec-habilidades">
-                     <textarea id="habilidade-nome"></textarea>
-                     <button id="botao-dropdown" onclick="toggleDropdown()">
+                    <textarea id="habilidade-nome"></textarea>
+                    <button id="botao-dropdown" onclick="toggleDropdown()">
                         <ion-icon name="caret-down-outline"></ion-icon>
                     </button>
-                      <div id="habilidade-descricao">
+                    <div id="habilidade-descricao">
                         <textarea id="habilidade-descricao-texto"></textarea>
                     </div>
                 </div>
@@ -332,36 +338,36 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-          const addButton = document.querySelector('.add-item');
-          const container = document.querySelector('.itens');
-          const template = document.querySelector('.item-container-template');
-        
-          addButton.addEventListener('click', () => {
-            // Clone the template and remove display none
-            const newContainer = template.cloneNode(true);
-            newContainer.style.display = 'flex';
-            newContainer.style.height = '50px';
-            newContainer.style.paddingBottom = '50px';
-            newContainer.style.marginTop = '5px';
-            newContainer.classList.remove('item-container-template');
-        
-            // Insert the new container before the add button
-            container.insertBefore(newContainer, addButton.parentElement.nextElementSibling);
-        
-            // Optionally, add a remove button to each new container
-            const removeButton = document.createElement('button');
-            removeButton.textContent = '-';
-            removeButton.classList.add('remove-item');
-            newContainer.appendChild(removeButton);
-        
-            // Handle removing the container
-            removeButton.addEventListener('click', () => {
-              newContainer.remove();
+            const addButton = document.querySelector('.add-item');
+            const container = document.querySelector('.itens');
+            const template = document.querySelector('.item-container-template');
+
+            addButton.addEventListener('click', () => {
+                // Clone the template and remove display none
+                const newContainer = template.cloneNode(true);
+                newContainer.style.display = 'flex';
+                newContainer.style.height = '50px';
+                newContainer.style.paddingBottom = '50px';
+                newContainer.style.marginTop = '5px';
+                newContainer.classList.remove('item-container-template');
+
+                // Insert the new container before the add button
+                container.insertBefore(newContainer, addButton.parentElement.nextElementSibling);
+
+                // Optionally, add a remove button to each new container
+                const removeButton = document.createElement('button');
+                removeButton.textContent = '-';
+                removeButton.classList.add('remove-item');
+                newContainer.appendChild(removeButton);
+
+                // Handle removing the container
+                removeButton.addEventListener('click', () => {
+                    newContainer.remove();
+                });
             });
-          });
         });
-        </script>
-        
+    </script>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
