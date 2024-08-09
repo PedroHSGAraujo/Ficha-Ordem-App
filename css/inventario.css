@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
     resize: none;
 }
+/*Isso aqui tira o highlight azul de coisas clicáveis no celular*/
 html{
     -webkit-tap-highlight-color: transparent;
 }
@@ -193,7 +194,7 @@ html{
 }
 .itens {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     background: black;
     color: white;
     margin: 10px;
@@ -219,7 +220,7 @@ html{
     position: relative;
     margin-top: 10px;
     left: 5px;
-    width: 185px;
+    width: 184px;
     height: 50px;
 }
 .item-nome textarea{
@@ -311,7 +312,7 @@ html{
     margin-top: 16px;
     margin-left: 6px;
     left: 9px;
-    width: 50px;
+    width: 51px;
 }
 #item-espaco-1 {
     border: none;
@@ -345,14 +346,14 @@ html{
 .item-container,
 .item-container-template {
     display: flex;
-    flex-direction: row; /* Keep inputs in a row */
+    flex-direction: row;
     align-items: center;
     height: 50px;
     margin-bottom: -5px;
     background: black;
 }
 .item-container-template {
-    display: none; /* Keep the template hidden */
+    display: none;
 }
 
 .add-item {
@@ -362,10 +363,9 @@ html{
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
-    width: 32px !important;
+    width: 31px !important;
     height: 50px !important;
     margin-top: 10px;
-    margin-right: 5px;
     margin-left: 13px;
     display: flex;
     justify-content: center;
@@ -374,7 +374,6 @@ html{
 .add-item:focus {
     outline: none;
 }
-
 .remove-item {
     font-size: 2em !important;
     font-weight: 600;
@@ -392,15 +391,14 @@ html{
     align-items: center;
     box-shadow: 0 0 0 5px black;
 }
-
 .remove-item:focus {
     outline: none;
 }
 .categoria{
     padding-left: 10px;
 }
-
-.espacador{ /*Ajuste Técnico Permanente*/
+/*Ajuste Técnico Permanente*/
+.espacador{
     width: 100vw;
     height: 100px;
     background-color: transparent;

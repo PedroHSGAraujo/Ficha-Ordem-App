@@ -23,7 +23,8 @@ html{
     --pos6: 242px;
     --pos7: 292px;
 }
-
+/*não sei como nada aqui funciona*/
+/*mas sei que funciona*/
 body{
     display: flex;
     flex-direction: column;

@@ -12,7 +12,10 @@
 </head>
 
 <body>
+    <!--Essa div serve pra encapsular tudo que não for a barra de navegação-->
+    <!--Todas as páginas estão em apenas um arquivo html para manter a fluidez das animações da barra de navegação-->
     <div class="viewport">
+        <!--Nomes auto-explicativos-->
         <div class="inventario-page" id="inventario">
             <div class="inventario">
                 <h1>INVENTARIO</h1>
@@ -38,6 +41,7 @@
                 </div>
             </div>
             <div class="itens">
+                <!--Primeiro item (fixo)-->
                 <div class="titles">
                     <h1 class="item">ITEM</h1>
                     <h1 class="categoria">CATEGORIA</h1>
@@ -53,8 +57,9 @@
                     <div class="item-espaco">
                         <textarea name="item-espaco" id="item-espaco"></textarea>
                     </div>
-                    <button class="add-item">+</button> <!-- Plus button -->
+                    <button class="add-item">+</button>
                 </div>
+                <!--Template dos itens adicionados-->
                 <div class="item-container-template" style="display: none;">
                     <div class="item-nome-1">
                         <textarea name="item-nome-1"></textarea>
@@ -67,11 +72,12 @@
                     </div>
                 </div>
             </div>
+            <!--Essa div serve para fazer um espaço em baixo da página para a barra de navegação não cobrir nenhum item adicionado-->
             <div class="espacador">
-
             </div>
         </div>
         <div class="atributos-page" id="atributos">
+            <!--Areas de texto dos atributos-->
             <div id="AGI">
                 <textarea name="AGI" rows="1" placeholder=""></textarea>
             </div>
@@ -93,34 +99,30 @@
                     <p>Treino</p>
                 </div>
                 <div class="pericias-lista">
-                    <p>Acrobacia+</p>
-                    <p>Adestramento*</p>
-                    <p>Artes*</p>
-                    <p>Atletismo</p>
-                    <p>Atualidades</p>
-                    <p>Ciências*</p>
-                    <p>Crime*+</p>
-                    <p>Diplomacia</p>
-                    <p>Enganação</p>
-                    <p>Fortitude</p>
-                    <p>Furtividade+</p>
-                    <p>Iniciativa</p>
-                    <p>Intimidação</p>
-                    <p>Intuição</p>
-                    <p>Investigação</p>
-                    <p>Luta</p>
-                    <p>Medicina</p>
-                    <p>Ocultismo*</p>
-                    <p>Percepção</p>
-                    <p>Pilotagem*</p>
-                    <p>Pontaria</p>
-                    <p>Profissão*</p>
-                    <p>Reflexos</p>
-                    <p>Relgião*</p>
-                    <p>Sobrevivência</p>
-                    <p>Tática*</p>
-                    <p>Tecnologia*</p>
-                    <p>Vontade</p>
+                    <div class="pericias-div">
+                        <p>Acrobacia+</p>
+                        <div>
+                            <div class="dice">
+                                <ion-icon name="dice-outline"></ion-icon>
+                            </div>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="selected">0</span>
+                                    <div class="caret"></div>
+                                </div>
+                                <ul class="menu">
+                                    <!--A classe dessa div é activex pq se for active da conflito com a barra de navegação-->
+                                    <li class="activex">0</li>
+                                    <li>5</li>
+                                    <li>10</li>
+                                    <li>15</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pericias-div">
+                        <p>Teste</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,6 +245,7 @@
             <div class="brilho"></div>
         </ul>
     </div>
+    <!--Esse script faz a navbar funcionar e mudar de página etc-->
     <script>
         var inventarioPage = document.getElementById("inventario");
         var atributosPage = document.getElementById("atributos");
@@ -326,6 +329,7 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
+    <!--Esse script faz o dropdown das habilidades funcionar-->
     <script>
         function toggleDropdown() {
             var caixaMaior = document.getElementById('habilidade-descricao');
@@ -336,6 +340,7 @@
             }
         }
     </script>
+    <!--Esse script faz o botão de adicionar e remover itens funcionarem-->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const addButton = document.querySelector('.add-item');
@@ -367,7 +372,38 @@
             });
         });
     </script>
+    <!--Esse script faz o dropdown das perícias funcionarem-->
+    <script>
+        const dorpdowns = document.querySelectorAll('.dropdown');
 
+        dorpdowns.forEach(dorpdown => {
+            const select = dorpdown.querySelector('.select');
+            const caret = dorpdown.querySelector('.caret');
+            const menu = dorpdown.querySelector('.menu');
+            const options = dorpdown.querySelectorAll('.menu li');
+            const selected = dorpdown.querySelector('.selected');
+
+            select.addEventListener('click', () => {
+                select.classList.toggle('select-clicked');
+                caret.classList.toggle('caret-rotate');
+                menu.classList.toggle('menu-open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.innerText = option.innerText;
+                    select.classList.remove('select-clicked');
+                    caret.classList.remove('caret-rotate');
+                    menu.classList.remove('menu-open');
+                    options.forEach(option => {
+                        option.classList.remove('activex');
+                    });
+                    option.classList.add('activex');
+                });
+            });
+        });
+    </script>
+    <!--Esses scripts são dos ícones-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
